@@ -65,19 +65,12 @@ function HomePage() {
           <div className="md:col-span-5">
             <div className="relative aspect-[4/5] overflow-hidden rounded-sm bg-secondary">
               <img
-                src={benePhoto.url}
-                alt="Benedikt — Moderator des Kanibeli Podcasts"
+                src={heroImg}
+                alt="Mikrofon im Studio"
                 className="h-full w-full object-cover"
                 loading="eager"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 via-transparent to-transparent" />
-              <div className="absolute bottom-6 left-6 right-6 text-background">
-                <div className="eyebrow mb-1 text-background/80">Hinter dem Mikrofon</div>
-                <div className="font-display text-xl leading-tight">Benedikt</div>
-                <div className="mt-1 text-xs text-background/70">
-                  Moderator · Neugieriger Zuhörer
-                </div>
-              </div>
             </div>
           </div>
         </div>
