@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Headphones, Mic, Quote } from "lucide-react";
-import heroImage from "@/assets/hero-microphone.jpg";
+import benePhoto from "@/assets/bene.jpg.asset.json";
 import { episodes, formatDate } from "@/lib/episodes";
 
 export const Route = createFileRoute("/")({
@@ -10,7 +10,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Der Kanibeli Podcast: Gespräche mit Menschen, die ihren eigenen Weg gehen. Interviews ohne Bewertung — neugierig, respektvoll, menschlich.",
+          "Der Kanibeli Podcast: Gespräche mit Menschen, die ihren eigenen Weg gehen. Brandneu — die ersten Folgen erscheinen bald.",
       },
       { property: "og:title", content: "Kanibeli Podcast" },
       {
@@ -34,7 +34,7 @@ function HomePage() {
       <section className="relative overflow-hidden border-b border-border">
         <div className="container-x grid items-center gap-16 py-20 md:grid-cols-12 md:py-32">
           <div className="md:col-span-7">
-            <div className="eyebrow mb-8">Folge 12 · Jetzt verfügbar</div>
+            <div className="eyebrow mb-8">Brandneuer Podcast · Coming soon</div>
             <h1 className="text-5xl leading-[1.02] md:text-7xl lg:text-8xl">
               Außergewöhnliche
               <br />
@@ -43,23 +43,21 @@ function HomePage() {
               <span className="italic text-[oklch(0.48_0.10_45)]">Ehrliche</span> Geschichten.
             </h1>
             <p className="mt-10 max-w-xl text-lg leading-relaxed text-muted-foreground">
-              Kanibeli ist ein Interview-Podcast über Menschen, die anders leben als die meisten —
-              und über das, was wir von ihnen lernen können.
+              Kanibeli ist ein neuer Interview-Podcast über Menschen, die anders leben als die
+              meisten — und über das, was wir von ihnen lernen können. Die ersten Folgen
+              erscheinen bald.
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <Link
-                to="/episoden"
+                to="/gast-werden"
                 className="group inline-flex items-center gap-3 rounded-full bg-foreground px-6 py-3.5 text-xs font-medium uppercase tracking-widest text-background transition-opacity hover:opacity-90"
               >
-                <Headphones className="h-4 w-4" />
-                Episoden hören
+                <Mic className="h-4 w-4" />
+                Gast werden
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
               </Link>
-              <Link
-                to="/gast-werden"
-                className="link-underline text-sm text-foreground"
-              >
-                Selbst Gast werden →
+              <Link to="/ueber" className="link-underline text-sm text-foreground">
+                Mehr erfahren →
               </Link>
             </div>
           </div>
@@ -67,17 +65,17 @@ function HomePage() {
           <div className="md:col-span-5">
             <div className="relative aspect-[4/5] overflow-hidden rounded-sm bg-secondary">
               <img
-                src={heroImage}
-                alt="Mikrofon im warmen Gegenlicht — Dokumentaraufnahme aus dem Kanibeli Studio"
+                src={benePhoto.url}
+                alt="Benedikt — Moderator des Kanibeli Podcasts"
                 className="h-full w-full object-cover"
                 loading="eager"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 via-transparent to-transparent" />
               <div className="absolute bottom-6 left-6 right-6 text-background">
-                <div className="eyebrow mb-1 text-background/80">Aktuelle Folge</div>
-                <div className="font-display text-xl leading-tight">{latest[0].title}</div>
+                <div className="eyebrow mb-1 text-background/80">Hinter dem Mikrofon</div>
+                <div className="font-display text-xl leading-tight">Benedikt</div>
                 <div className="mt-1 text-xs text-background/70">
-                  mit {latest[0].guest} · {latest[0].duration}
+                  Moderator · Neugieriger Zuhörer
                 </div>
               </div>
             </div>
@@ -146,8 +144,8 @@ function HomePage() {
         <div className="container-x py-24 md:py-32">
           <div className="flex items-end justify-between gap-8">
             <div>
-              <div className="eyebrow mb-4">Neueste Episoden</div>
-              <h2 className="text-4xl md:text-5xl">Aktuell im Programm</h2>
+              <div className="eyebrow mb-4">Bald verfügbar</div>
+              <h2 className="text-4xl md:text-5xl">Erste Episoden</h2>
             </div>
             <Link to="/episoden" className="link-underline hidden text-sm md:inline">
               Alle Episoden →
@@ -163,13 +161,13 @@ function HomePage() {
                 </div>
                 <h3 className="mt-6 text-2xl leading-tight">{ep.title}</h3>
                 <div className="mt-3 text-sm text-[oklch(0.48_0.10_45)]">
-                  mit {ep.guest} · {ep.guestRole}
+                  {ep.guest}
                 </div>
                 <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{ep.excerpt}</p>
                 <div className="mt-8 flex items-center justify-between border-t border-border pt-4">
                   <span className="text-xs text-muted-foreground">{formatDate(ep.date)}</span>
-                  <span className="inline-flex items-center gap-2 text-xs uppercase tracking-widest">
-                    Hören
+                  <span className="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-muted-foreground">
+                    Demnächst
                     <ArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-1" />
                   </span>
                 </div>
@@ -189,14 +187,17 @@ function HomePage() {
           <div className="flex flex-col items-center gap-8 text-center">
             <div className="eyebrow">Höre auf deiner Plattform</div>
             <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-4 font-display text-2xl text-muted-foreground md:text-3xl">
-              <a href="#" className="link-underline hover:text-foreground">Spotify</a>
+              <span className="opacity-40">Spotify</span>
               <span className="text-border">·</span>
-              <a href="#" className="link-underline hover:text-foreground">Apple Podcasts</a>
+              <span className="opacity-40">Apple Podcasts</span>
               <span className="text-border">·</span>
-              <a href="#" className="link-underline hover:text-foreground">YouTube</a>
+              <span className="opacity-40">YouTube</span>
               <span className="text-border">·</span>
-              <a href="#" className="link-underline hover:text-foreground">RSS</a>
+              <span className="opacity-40">RSS</span>
             </div>
+            <p className="max-w-md text-sm text-muted-foreground">
+              Die Podcast-Plattformen werden mit Erscheinen der ersten Folge verknüpft.
+            </p>
           </div>
         </div>
       </section>
