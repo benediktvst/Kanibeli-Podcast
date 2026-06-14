@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Headphones, Mic, Quote } from "lucide-react";
-import benePhoto from "@/assets/bene.jpg.asset.json";
+import heroImg from "@/assets/hero-microphone.jpg";
 import { episodes, formatDate } from "@/lib/episodes";
 
 export const Route = createFileRoute("/")({
