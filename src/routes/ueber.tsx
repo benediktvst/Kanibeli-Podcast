@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import benePhoto from "@/assets/bene.jpg.asset.json";
 
 export const Route = createFileRoute("/ueber")({
   head: () => ({
