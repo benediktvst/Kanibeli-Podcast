@@ -9,8 +9,50 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as UeberRouteImport } from './routes/ueber'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as KontaktRouteImport } from './routes/kontakt'
+import { Route as ImpressumRouteImport } from './routes/impressum'
+import { Route as GastWerdenRouteImport } from './routes/gast-werden'
+import { Route as EpisodenRouteImport } from './routes/episoden'
+import { Route as DatenschutzRouteImport } from './routes/datenschutz'
 import { Route as IndexRouteImport } from './routes/index'
 
+const UeberRoute = UeberRouteImport.update({
+  id: '/ueber',
+  path: '/ueber',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KontaktRoute = KontaktRouteImport.update({
+  id: '/kontakt',
+  path: '/kontakt',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ImpressumRoute = ImpressumRouteImport.update({
+  id: '/impressum',
+  path: '/impressum',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GastWerdenRoute = GastWerdenRouteImport.update({
+  id: '/gast-werden',
+  path: '/gast-werden',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EpisodenRoute = EpisodenRouteImport.update({
+  id: '/episoden',
+  path: '/episoden',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DatenschutzRoute = DatenschutzRouteImport.update({
+  id: '/datenschutz',
+  path: '/datenschutz',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +61,130 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/datenschutz': typeof DatenschutzRoute
+  '/episoden': typeof EpisodenRoute
+  '/gast-werden': typeof GastWerdenRoute
+  '/impressum': typeof ImpressumRoute
+  '/kontakt': typeof KontaktRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/ueber': typeof UeberRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/datenschutz': typeof DatenschutzRoute
+  '/episoden': typeof EpisodenRoute
+  '/gast-werden': typeof GastWerdenRoute
+  '/impressum': typeof ImpressumRoute
+  '/kontakt': typeof KontaktRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/ueber': typeof UeberRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/datenschutz': typeof DatenschutzRoute
+  '/episoden': typeof EpisodenRoute
+  '/gast-werden': typeof GastWerdenRoute
+  '/impressum': typeof ImpressumRoute
+  '/kontakt': typeof KontaktRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/ueber': typeof UeberRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/datenschutz'
+    | '/episoden'
+    | '/gast-werden'
+    | '/impressum'
+    | '/kontakt'
+    | '/sitemap.xml'
+    | '/ueber'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/datenschutz'
+    | '/episoden'
+    | '/gast-werden'
+    | '/impressum'
+    | '/kontakt'
+    | '/sitemap.xml'
+    | '/ueber'
+  id:
+    | '__root__'
+    | '/'
+    | '/datenschutz'
+    | '/episoden'
+    | '/gast-werden'
+    | '/impressum'
+    | '/kontakt'
+    | '/sitemap.xml'
+    | '/ueber'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  DatenschutzRoute: typeof DatenschutzRoute
+  EpisodenRoute: typeof EpisodenRoute
+  GastWerdenRoute: typeof GastWerdenRoute
+  ImpressumRoute: typeof ImpressumRoute
+  KontaktRoute: typeof KontaktRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  UeberRoute: typeof UeberRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/ueber': {
+      id: '/ueber'
+      path: '/ueber'
+      fullPath: '/ueber'
+      preLoaderRoute: typeof UeberRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/kontakt': {
+      id: '/kontakt'
+      path: '/kontakt'
+      fullPath: '/kontakt'
+      preLoaderRoute: typeof KontaktRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/impressum': {
+      id: '/impressum'
+      path: '/impressum'
+      fullPath: '/impressum'
+      preLoaderRoute: typeof ImpressumRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gast-werden': {
+      id: '/gast-werden'
+      path: '/gast-werden'
+      fullPath: '/gast-werden'
+      preLoaderRoute: typeof GastWerdenRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/episoden': {
+      id: '/episoden'
+      path: '/episoden'
+      fullPath: '/episoden'
+      preLoaderRoute: typeof EpisodenRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/datenschutz': {
+      id: '/datenschutz'
+      path: '/datenschutz'
+      fullPath: '/datenschutz'
+      preLoaderRoute: typeof DatenschutzRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,17 +197,14 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  DatenschutzRoute: DatenschutzRoute,
+  EpisodenRoute: EpisodenRoute,
+  GastWerdenRoute: GastWerdenRoute,
+  ImpressumRoute: ImpressumRoute,
+  KontaktRoute: KontaktRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
+  UeberRoute: UeberRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
