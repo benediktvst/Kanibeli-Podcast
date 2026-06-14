@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Play, Share2 } from "lucide-react";
+import { Clock } from "lucide-react";
 import { episodes, formatDate } from "@/lib/episodes";
 
 export const Route = createFileRoute("/episoden")({
@@ -9,10 +9,10 @@ export const Route = createFileRoute("/episoden")({
       {
         name: "description",
         content:
-          "Alle Folgen des Kanibeli Podcasts: Interviews mit Menschen, die anders leben — vom Imker bis zur Höhlenforscherin.",
+          "Alle Folgen des Kanibeli Podcasts: Interviews mit Menschen, die anders leben. Die ersten Episoden erscheinen bald.",
       },
       { property: "og:title", content: "Alle Episoden — Kanibeli" },
-      { property: "og:description", content: "Alle Folgen des Kanibeli Podcasts auf einen Blick." },
+      { property: "og:description", content: "Alle Folgen des Kanibeli Podcasts auf einen Blick. Bald verfügbar." },
       { property: "og:url", content: "/episoden" },
     ],
     links: [{ rel: "canonical", href: "/episoden" }],
@@ -27,12 +27,11 @@ function EpisodesPage() {
         <div className="container-x py-24 md:py-32">
           <div className="eyebrow mb-8">Episoden</div>
           <h1 className="max-w-4xl text-5xl md:text-7xl">
-            {episodes.length} Gespräche.
-            <br />
-            {episodes.length} Lebenswege.
+            Bald verfügbar.
           </h1>
           <p className="mt-8 max-w-xl text-lg text-muted-foreground">
-            Jede Folge ein Mensch, ein Mikrofon und die Frage: Warum lebst du, wie du lebst?
+            Der Kanibeli Podcast ist brandneu. Die ersten Gespräche mit außergewöhnlichen Menschen
+            erscheinen in Kürze. Trag dich ein, um informiert zu werden.
           </p>
         </div>
       </section>
@@ -55,7 +54,7 @@ function EpisodesPage() {
                       {ep.title}
                     </h2>
                     <div className="mt-3 text-sm text-[oklch(0.48_0.10_45)]">
-                      mit {ep.guest} · {ep.guestRole}
+                      {ep.guestRole}
                     </div>
                     <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground">
                       {ep.excerpt}
@@ -63,21 +62,14 @@ function EpisodesPage() {
                   </div>
 
                   <div className="md:col-span-3 md:text-right">
-                    <div className="text-xs text-muted-foreground">{ep.duration}</div>
-                    <div className="mt-6 flex items-center gap-3 md:justify-end">
-                      <button
-                        className="inline-flex items-center gap-2 rounded-full bg-foreground px-5 py-2.5 text-xs font-medium uppercase tracking-widest text-background transition-opacity hover:opacity-90"
-                        aria-label={`Episode ${ep.number} abspielen`}
-                      >
-                        <Play className="h-3.5 w-3.5 fill-current" />
-                        Hören
-                      </button>
-                      <button
-                        className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border transition-colors hover:bg-secondary"
-                        aria-label="Teilen"
-                      >
-                        <Share2 className="h-3.5 w-3.5" />
-                      </button>
+                    <div className="flex items-center justify-end gap-2 text-xs text-muted-foreground">
+                      <Clock className="h-3.5 w-3.5" />
+                      {ep.duration}
+                    </div>
+                    <div className="mt-6">
+                      <span className="inline-flex items-center gap-2 rounded-full border border-border px-4 py-2 text-xs uppercase tracking-widest text-muted-foreground">
+                        Demnächst
+                      </span>
                     </div>
                   </div>
                 </div>
