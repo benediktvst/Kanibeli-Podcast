@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import benePhoto from "@/assets/bene.jpg.asset.json";
 
 export const Route = createFileRoute("/ueber")({
   head: () => ({
@@ -60,6 +61,33 @@ function AboutPage() {
             <p className="font-display text-3xl leading-snug md:text-4xl">
               Geschichten von Menschen erzählen, die ihren eigenen Weg gehen — und dadurch zeigen,
               wie vielfältig ein gelungenes Leben aussehen kann.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-b border-border">
+        <div className="container-x grid gap-12 py-24 md:grid-cols-12 md:items-center">
+          <div className="md:col-span-4">
+            <div className="relative mx-auto aspect-[4/5] max-w-xs overflow-hidden rounded-sm bg-secondary md:mx-0">
+              <img
+                src={benePhoto.url}
+                alt="Benedikt — Moderator des Kanibeli Podcasts"
+                className="h-full w-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 via-transparent to-transparent" />
+              <div className="absolute bottom-4 left-4 right-4 text-background">
+                <div className="eyebrow mb-0.5 text-background/80">Hinter dem Mikrofon</div>
+                <div className="font-display text-lg leading-tight">Benedikt</div>
+              </div>
+            </div>
+          </div>
+          <div className="md:col-span-8">
+            <div className="eyebrow mb-4">Hinter dem Mikrofon</div>
+            <p className="text-lg leading-relaxed text-foreground/90">
+              Ich bin Benedikt, der Moderator hinter Kanibeli. Dieser Podcast ist aus der Idee
+              entstanden, dass die spannendsten Geschichten oft dort liegen, wo Menschen bewusst
+              andere Wege gehen. Ich freue mich darauf, diese Geschichten mit dir zu teilen.
             </p>
           </div>
         </div>
