@@ -47,15 +47,7 @@ function DatenschutzPage() {
           </div>
 
           <div>
-            <h2 className="text-xl">4. Newsletter</h2>
-            <p className="mt-2 text-muted-foreground">
-              Für die Anmeldung zum Newsletter verwenden wir das Double-Opt-In-Verfahren. Du kannst
-              den Newsletter jederzeit über den Abmeldelink abbestellen.
-            </p>
-          </div>
-
-          <div>
-            <h2 className="text-xl">5. Deine Rechte</h2>
+            <h2 className="text-xl">4. Deine Rechte</h2>
             <p className="mt-2 text-muted-foreground">
               Du hast jederzeit das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der
               Verarbeitung sowie auf Datenübertragbarkeit. Wende dich dazu an die im Impressum
