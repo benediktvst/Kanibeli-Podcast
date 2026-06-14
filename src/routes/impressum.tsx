@@ -33,7 +33,7 @@ function ImpressumPage() {
           <div>
             <h2 className="text-xl">Kontakt</h2>
             <p className="mt-2 text-muted-foreground">
-              E-Mail: hallo@kanibeli-podcast.de<br />
+              E-Mail: podcast@kanibeli.de<br />
               Telefon: [optional]
             </p>
           </div>

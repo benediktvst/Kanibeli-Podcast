@@ -41,11 +41,11 @@ function ContactPage() {
             <div>
               <div className="eyebrow mb-4">Direkt</div>
               <a
-                href="mailto:hallo@kanibeli-podcast.de"
+                href="mailto:podcast@kanibeli.de"
                 className="link-underline inline-flex items-center gap-3 font-display text-2xl"
               >
                 <Mail className="h-5 w-5" />
-                hallo@kanibeli-podcast.de
+                podcast@kanibeli.de
               </a>
             </div>
 
