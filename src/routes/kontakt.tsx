@@ -61,26 +61,6 @@ function ContactPage() {
               </div>
             </div>
 
-            <div>
-              <div className="eyebrow mb-4">Newsletter</div>
-              <p className="mb-4 text-sm text-muted-foreground">
-                Einmal im Monat: eine neue Folge, ein Gedanke, ein Hinweis. Kein Spam.
-              </p>
-              <form
-                className="flex border-b border-border"
-                onSubmit={(e) => e.preventDefault()}
-              >
-                <input
-                  type="email"
-                  required
-                  placeholder="deine@email.de"
-                  className="flex-1 bg-transparent py-2 text-sm placeholder:text-muted-foreground/60 focus:outline-none"
-                />
-                <button className="text-xs font-medium uppercase tracking-widest text-[oklch(0.48_0.10_45)]">
-                  Abonnieren →
-                </button>
-              </form>
-            </div>
           </div>
 
           <div className="md:col-span-8">
