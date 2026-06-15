@@ -31,18 +31,18 @@ function HomePage() {
       <section className="relative overflow-hidden border-b border-border">
         <div className="container-x grid items-center gap-16 py-20 md:grid-cols-12 md:py-32">
           <div className="md:col-span-7">
-            <div className="eyebrow mb-8">Brandneuer Podcast · Coming soon</div>
+            <div className="eyebrow mb-8">Coming soon — Die ersten Folgen kommen ab Sommer 2026</div>
             <h1 className="text-5xl leading-[1.02] md:text-7xl lg:text-8xl">
               Außergewöhnliche
               <br />
               Menschen.
               <br />
-              <span className="italic text-[oklch(0.48_0.10_45)]">Ehrliche</span> Geschichten.
+              <span className="italic text-[oklch(0.48_0.10_45)]">Echte</span> Geschichten.
             </h1>
             <p className="mt-10 max-w-xl text-lg leading-relaxed text-muted-foreground">
-              Kanibeli ist ein neuer Interview-Podcast über Menschen, die anders leben als die
-              meisten — und über das, was wir von ihnen lernen können. Die ersten Folgen
-              erscheinen bald.
+              Der Kanibeli Podcast spricht mit Menschen, die Dinge anders machen als der
+              Durchschnitt — sei es im Beruf, im Hobby oder im gesamten Lebensweg. Ehrliche
+              Gespräche über unkonventionelle Wege und was wir von ihnen lernen können.
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <Link

@@ -7,8 +7,8 @@ export function Footer() {
         <div className="md:col-span-2">
           <div className="font-display text-2xl tracking-tight">Kanibeli Podcast</div>
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground">
-            Ein Interview-Podcast über Menschen mit außergewöhnlichen Lebenswegen. Neugierig,
-            respektvoll und ohne Bewertung.
+            Ein Interview-Podcast für echte Geschichten von Menschen, die ihren eigenen Weg
+            gehen. Mit Neugier, Respekt und ohne Bewertung.
           </p>
         </div>
 

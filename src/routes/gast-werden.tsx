@@ -46,7 +46,6 @@ function GuestPage() {
                 {[
                   "Du musst nicht „bekannt“ sein.",
                   "Es gibt kein vorgeschriebenes Thema.",
-                  "Aufnahmen sind remote oder vor Ort möglich.",
                   "Du bekommst die Folge vor Veröffentlichung zu hören.",
                 ].map((l) => (
                   <li key={l} className="flex gap-3">
@@ -92,9 +91,8 @@ function GuestPage() {
             <ol className="space-y-8">
               {[
                 ["Bewerbung", "Du schreibst mir kurz, wer du bist und worum es geht."],
-                ["Vorgespräch", "Wir telefonieren 20 Minuten — unverbindlich, einfach kennenlernen."],
-                ["Aufnahme", "60 – 90 Minuten Gespräch, remote oder im Studio in Hamburg."],
-                ["Schnitt & Freigabe", "Du bekommst die Folge vorab und kannst Stellen herausnehmen lassen."],
+                ["Vorgespräch", "Wir telefonieren 10 bis 20 Minuten — unverbindlich, einfach kennenlernen."],
+                ["Aufnahme", "60 – 90 Minuten Gespräch, vor Ort direkt beim Gast oder in einer naheliegenden Location."],
                 ["Veröffentlichung", "Mittwochs erscheint deine Folge auf allen Plattformen."],
               ].map(([t, d], i) => (
                 <li key={t} className="flex gap-6">
