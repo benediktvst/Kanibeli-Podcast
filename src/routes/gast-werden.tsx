@@ -46,7 +46,6 @@ function GuestPage() {
                 {[
                   "Du musst nicht „bekannt“ sein.",
                   "Es gibt kein vorgeschriebenes Thema.",
-                  "Aufnahmen sind remote oder vor Ort möglich.",
                   "Du bekommst die Folge vor Veröffentlichung zu hören.",
                 ].map((l) => (
                   <li key={l} className="flex gap-3">
