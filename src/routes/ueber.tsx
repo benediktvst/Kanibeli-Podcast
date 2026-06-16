@@ -26,7 +26,7 @@ function AboutPage() {
         <div className="container-x py-24 md:py-32">
           <div className="eyebrow mb-8">Über den Podcast</div>
           <h1 className="max-w-4xl text-5xl md:text-7xl">
-            Weil die spannendsten Geschichten meist Abseits des Durchschnitts liegen.
+            Weil die spannendsten <span className="text-[oklch(0.48_0.10_45)]">Geschichten</span> meist Abseits des Durchschnitts zu finden sind.
           </h1>
         </div>
       </section>
