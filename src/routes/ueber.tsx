@@ -59,7 +59,7 @@ function AboutPage() {
               Doch ich möchte nicht egoistisch sein und die inspirierende Geschichten alleine hören – ich möchte diese Geschichten mit jedem teilen der sie hören möchte. Da draußen gibt es sicher viele, die sich ähnliche Fragen stellen und sich für außergewöhnliche Lebensentwürfe, verrückte Leidenschaften und alternative Wege interessieren.
             </p>
             <p>
-              Deshalb ist dieser Podcast entstanden: Als Plattform für echte Gespräche, ehrliche Einblicke und Inspiration. Nicht als Anleitung, wie man leben „soll“, sondern als Sammlung von Möglichkeiten, wie man leben kann.
+              Deshalb ist dieser Podcast entstanden: Als Plattform für echte Gespräche, ehrliche Einblicke und Inspiration. Nicht als Anleitung, wie man leben „soll“, sondern als Sammlung von Möglichkeiten, wie man leben <em>kann</em>.
             </p>
           </div>
         </div>
