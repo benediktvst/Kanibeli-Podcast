@@ -20,8 +20,6 @@ export const Route = createFileRoute("/gast-werden")({
 });
 
 function GuestPage() {
-  const [sent, setSent] = useState(false);
-
   return (
     <>
       <section className="border-b border-border">
