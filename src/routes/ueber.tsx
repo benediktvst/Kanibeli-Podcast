@@ -26,7 +26,7 @@ function AboutPage() {
         <div className="container-x py-24 md:py-32">
           <div className="eyebrow mb-8">Über den Podcast</div>
           <h1 className="max-w-4xl text-5xl md:text-7xl">
-            Weil die spannendsten Geschichten meist Abseits des Durchschnitts liegen.
+            Weil die spannendsten <span className="text-[oklch(0.48_0.10_45)]">Geschichten</span> meist Abseits des Durchschnitts zu finden sind.
           </h1>
         </div>
       </section>
@@ -59,7 +59,7 @@ function AboutPage() {
               Doch ich möchte nicht egoistisch sein und die inspirierende Geschichten alleine hören – ich möchte diese Geschichten mit jedem teilen der sie hören möchte. Da draußen gibt es sicher viele, die sich ähnliche Fragen stellen und sich für außergewöhnliche Lebensentwürfe, verrückte Leidenschaften und alternative Wege interessieren.
             </p>
             <p>
-              Deshalb ist dieser Podcast entstanden: Als Plattform für echte Gespräche, ehrliche Einblicke und Inspiration. Nicht als Anleitung, wie man leben „soll“, sondern als Sammlung von Möglichkeiten, wie man leben kann.
+              Deshalb ist dieser Podcast entstanden: Als Plattform für echte Gespräche, ehrliche Einblicke und Inspiration. Nicht als Anleitung, wie man leben „soll“, sondern als Sammlung von Möglichkeiten, wie man leben <em>kann</em>.
             </p>
           </div>
         </div>
@@ -97,13 +97,13 @@ function AboutPage() {
           </div>
           <div className="md:col-span-8 space-y-6 text-lg leading-relaxed text-foreground/90">
             <p>
-              Jede Folge ist ein Gespräch von 45 bis 90 Minuten mit einem Menschen, dessen Weg sich
+              Jede Folge ist ein Gespräch von ca. 30 bis 90 Minuten mit einem Menschen, dessen Weg sich
               vom gewohnten unterscheidet. Keine Werbespots in der Mitte. Keine inszenierten
               Konflikte. Kein Bewerten.
             </p>
             <p>
               Stattdessen: ehrliche Fragen, ungeschnittene Antworten und die Bereitschaft, auch dort
-              hinzuhören, wo es unbequem wird. Neue Folgen erscheinen alle zwei Wochen, mittwochs.
+              hinzuhören, wo es unbequem wird. Neue Folgen erscheinen ca. alle zwei Wochen.
             </p>
           </div>
         </div>
