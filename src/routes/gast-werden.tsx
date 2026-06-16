@@ -107,7 +107,7 @@ function GuestPage() {
         </div>
       </section>
 
-      <section id="bewerbung">
+      <section>
         <div className="container-x grid gap-16 py-24 md:grid-cols-12">
           <div className="md:col-span-4">
             <div className="eyebrow">Bewerbung</div>
@@ -118,86 +118,16 @@ function GuestPage() {
           </div>
 
           <div className="md:col-span-8">
-            {sent ? (
-              <div className="border border-border bg-secondary/50 p-12 text-center">
-                <Check className="mx-auto h-8 w-8 text-[oklch(0.48_0.10_45)]" />
-                <h3 className="mt-4 text-2xl">Danke für deine Nachricht.</h3>
-                <p className="mt-2 text-sm text-muted-foreground">
-                  Ich melde mich innerhalb einer Woche zurück.
-                </p>
-              </div>
-            ) : (
-              <form
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  setSent(true);
-                }}
-                className="grid gap-6"
-              >
-                <div className="grid gap-6 md:grid-cols-2">
-                  <Field label="Name" name="name" required />
-                  <Field label="E-Mail" name="email" type="email" required />
-                </div>
-                <Field label="Wer bist du?" name="who" required placeholder="Beruf, Ort, ein Satz über dich" />
-                <Field
-                  label="Worüber sollen wir sprechen?"
-                  name="topic"
-                  required
-                  as="textarea"
-                  placeholder="Welche Geschichte trägst du mit dir? Was macht dein Leben anders?"
-                />
-                <Field label="Links (optional)" name="links" placeholder="Website, Instagram, Artikel …" />
-
-                <label className="flex items-start gap-3 text-sm text-muted-foreground">
-                  <input type="checkbox" required className="mt-1 accent-[oklch(0.48_0.10_45)]" />
-                  <span>
-                    Ich habe die <a href="/datenschutz" className="underline">Datenschutzerklärung</a> gelesen
-                    und stimme der Verarbeitung meiner Angaben zu.
-                  </span>
-                </label>
-
-                <div>
-                  <button
-                    type="submit"
-                    className="inline-flex items-center gap-3 rounded-full bg-foreground px-6 py-3.5 text-xs font-medium uppercase tracking-widest text-background transition-opacity hover:opacity-90"
-                  >
-                    Bewerbung absenden
-                  </button>
-                </div>
-              </form>
-            )}
+            <p className="text-lg leading-relaxed text-foreground/90">
+              Wenn du glaubst, dass deine Geschichte passt, schick mir einfach eine kurze Mail an{" "}
+              <a href="mailto:podcast@kanibeli.de" className="underline underline-offset-4">
+                podcast@kanibeli.de
+              </a>
+              . Ich freue mich darauf, von dir zu hören.
+            </p>
           </div>
         </div>
       </section>
     </>
-  );
-}
-
-function Field({
-  label,
-  name,
-  type = "text",
-  required,
-  placeholder,
-  as,
-}: {
-  label: string;
-  name: string;
-  type?: string;
-  required?: boolean;
-  placeholder?: string;
-  as?: "textarea";
-}) {
-  const common =
-    "w-full border-0 border-b border-border bg-transparent py-3 text-base text-foreground placeholder:text-muted-foreground/60 focus:border-foreground focus:outline-none focus:ring-0";
-  return (
-    <label className="block">
-      <span className="eyebrow mb-2 block">{label}{required && " *"}</span>
-      {as === "textarea" ? (
-        <textarea name={name} required={required} placeholder={placeholder} rows={5} className={common} />
-      ) : (
-        <input type={type} name={name} required={required} placeholder={placeholder} className={common} />
-      )}
-    </label>
   );
 }
