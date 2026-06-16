@@ -97,13 +97,13 @@ function AboutPage() {
           </div>
           <div className="md:col-span-8 space-y-6 text-lg leading-relaxed text-foreground/90">
             <p>
-              Jede Folge ist ein Gespräch von 45 bis 90 Minuten mit einem Menschen, dessen Weg sich
+              Jede Folge ist ein Gespräch von ca. 30 bis 90 Minuten mit einem Menschen, dessen Weg sich
               vom gewohnten unterscheidet. Keine Werbespots in der Mitte. Keine inszenierten
               Konflikte. Kein Bewerten.
             </p>
             <p>
               Stattdessen: ehrliche Fragen, ungeschnittene Antworten und die Bereitschaft, auch dort
-              hinzuhören, wo es unbequem wird. Neue Folgen erscheinen alle zwei Wochen, mittwochs.
+              hinzuhören, wo es unbequem wird. Neue Folgen erscheinen ca. alle zwei Wochen.
             </p>
           </div>
         </div>
