@@ -41,8 +41,9 @@ function GuestPage() {
               <div className="eyebrow mb-4">Wichtig zu wissen</div>
               <ul className="space-y-3 text-sm text-foreground/80">
                 {[
-                  "Du musst nicht „bekannt“ sein.",
+                  "Du musst nicht \"bekannt\" sein.",
                   "Es gibt kein vorgeschriebenes Thema.",
+                  "Das Interview darf gerne anonym erfolgen.",
                   "Du bekommst die Folge vor Veröffentlichung zu hören.",
                 ].map((l) => (
                   <li key={l} className="flex gap-3">
